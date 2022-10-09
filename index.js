@@ -19,7 +19,8 @@ mongoose
 //     console.log("Hi Test 01");
 //   });
 
-app.use("api/user", userRoutes);
+app.use(express.json());
+app.use('/api/user', userRoutes);
 
 app.listen(process.env.PORT || 5000, () => {
   console.log("Backend server is running!");
